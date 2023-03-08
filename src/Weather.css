@@ -8,7 +8,7 @@
 }
 
 .Weather h1 {
-  margin: 20px 0 0 0;
+  margin: 20px 0 5px 0;
   color: #38598b;
   font-size: 24pt;
   font-weight: 100;
@@ -32,6 +32,7 @@
   text-align: left;
   margin-bottom: 10px;
 }
+
 .Weather img {
   position: relative;
   top: 10px;
