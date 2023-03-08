@@ -35,8 +35,8 @@
 
 .Weather img {
   position: relative;
-  top: 10px;
-  height: 64px;
+  top: -10px;
+
   margin-right: 10px;
 }
 .Weather .temperature {
