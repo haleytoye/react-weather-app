@@ -36,19 +36,16 @@
 .Weather img {
   position: relative;
   top: -10px;
-
-  margin-right: 10px;
 }
 .Weather .temperature {
   color: black;
   font-size: 54pt;
   font-weight: 400;
-  margin-left: 10px;
   line-height: 64pt;
 }
 .Weather .weather-temperature-units {
   line-height: 1;
   position: relative;
-  top: 10pt;
-  font-size: 16pt;
+  top: -25pt;
+  font-size: 14pt;
 }
