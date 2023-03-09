@@ -1,12 +1,14 @@
+.App {
+  max-width: 600px;
+  margin: 40px auto;
+}
+
 .App a {
   text-decoration: none;
 }
-.App .container {
-  margin: 40px auto;
-  max-width: 600px;
-}
+
 .App footer {
   font-size: 10pt;
   margin-top: 5px;
-  margin-left: 10px;
+  text-align: center;
 }
