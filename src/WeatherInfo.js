@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
+import FeelsLike from "./FeelsLike";
 import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
+  const [unit, setUnit] = useState("celcius");
+
   return (
     <div className="WeatherInfo">
       <h1>{props.data.city}</h1>
@@ -18,16 +21,27 @@ export default function WeatherInfo(props) {
           <div className="d-flex">
             <img src={props.data.icon} alt={props.data.icon} />
             <div className="float-left">
-              <WeatherTemperature celcius={props.data.temperature} />
+              <WeatherTemperature
+                unit={unit}
+                temperature={props.data.temperature}
+                onChange={() => {
+                  if (unit === "celcius") {
+                    setUnit("farenheit");
+                  } else {
+                    setUnit("celcius");
+                  }
+                }}
+              />
             </div>
           </div>
         </div>
         <div className="col-5">
-          <ul>
-            <li>Feels Like: {props.data.feels}°</li>
-            <li>Humidity: {props.data.humidity}%</li>
-            <li>Wind: {props.data.wind} km/h</li>
-          </ul>
+          <FeelsLike
+            unit={unit}
+            temperature={props.data.feels}
+            humidity={props.data.humidity}
+            wind={props.data.wind}
+          />
         </div>
       </div>
     </div>
