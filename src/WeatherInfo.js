@@ -8,7 +8,7 @@ export default function WeatherInfo(props) {
   const [unit, setUnit] = useState("celcius");
 
   return (
-    <div className="WeatherInfo">
+    <div className="WeatherInfo mb-3">
       <h1>{props.data.city}</h1>
       <ul>
         <li>
