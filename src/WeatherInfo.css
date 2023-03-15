@@ -1,9 +1,9 @@
-.Weather ul {
+.WeatherInfo ul {
   margin: 0;
   padding: 0;
 }
 
-.Weather li {
+.WeatherInfo li {
   list-style-type: none;
   color: #38598b;
   font-size: 14pt;
@@ -12,7 +12,9 @@
   margin-bottom: 10px;
 }
 
-.Weather img {
+.WeatherInfo img {
+  max-width: 100%;
+  height: auto;
   position: relative;
   top: -10px;
 }
