@@ -10,12 +10,14 @@ export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo mb-3">
       <h1>{props.data.city}</h1>
+
       <ul>
         <li>
           <FormattedDate date={props.data.date} />
         </li>
         <li className="text-capitalize">{props.data.description}</li>
       </ul>
+
       <div className="row mt-3">
         <div className="col-7">
           <div className="d-flex">
@@ -35,7 +37,7 @@ export default function WeatherInfo(props) {
             </div>
           </div>
         </div>
-        <div className="col-5">
+        <div className="col-5 right">
           <FeelsLike
             unit={unit}
             temperature={props.data.feels}

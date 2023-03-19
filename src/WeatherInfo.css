@@ -1,5 +1,6 @@
 .WeatherInfo ul {
   margin: 0;
+
   padding: 0;
 }
 
@@ -7,9 +8,9 @@
   list-style-type: none;
   color: #38598b;
   font-size: 14pt;
-  line-height: 19pt;
+
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .WeatherInfo img {

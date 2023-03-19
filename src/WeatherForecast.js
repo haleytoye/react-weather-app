@@ -16,8 +16,18 @@ export default function WeatherForecast(props) {
     setLoaded(true);
   }
 
+  function load() {
+    let lon = props.coordinates.longitude;
+    let lat = props.coordinates.latitude;
+    let apiKey = "1o0f4aea9af54436031a3t4f3b2ca21f";
+    let units = "metric";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${lon}&lat=${lat}&key=${apiKey}&units=${units}`;
+
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   if (loaded) {
-    console.log(forecast);
+    //need to have if/else for C/F change - to be worked on
     return (
       <div className="WeatherForecast">
         <div className="row">
@@ -36,13 +46,7 @@ export default function WeatherForecast(props) {
       </div>
     );
   } else {
-    let lon = props.coordinates.longitude;
-    let lat = props.coordinates.latitude;
-    let apiKey = "1o0f4aea9af54436031a3t4f3b2ca21f";
-    let units = "metric";
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${lon}&lat=${lat}&key=${apiKey}&units=${units}`;
-
-    axios.get(apiUrl).then(handleResponse);
+    load();
     return null;
   }
 }
